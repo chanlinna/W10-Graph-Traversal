@@ -3,9 +3,8 @@
 ## Objective
 This project implements the Depth-First Search (DFS) and Breadth-First Search (BFS) algorithms to traverse a graph. The following methods are implemented:
 
-1. DFS(int startVertex): Performs a DFS starting from the given vertex and prints the traversal order. (Recursive approach)
+1. DFS(int startVertex): Performs a DFS starting from the given vertex and prints the traversal order. 
 2. BFS(int startVertex): Performs a BFS starting from the given vertex and prints the traversal order.
-3. Display(): Prints the graph’s structure using an Adjacency List.
 
 ## Overview of the Graph
 The graph used in this project is an undirected graph represented using an Adjacency List. In this representation, each vertex points to a list of its neighboring vertices. This structure allows efficient graph traversal using DFS and BFS.
@@ -22,8 +21,8 @@ Vertex 3: [1, 4]
 Vertex 4: [0, 3]
 
 ## DFS Traversal Process and Results
-### DFS Recursive Approach: 
-- Traversal Process: DFS begins at the start vertex (vertex 0). The algorithm explores each branch as deeply as possible before backtracking. It processes vertex 0, then recursively explores all neighbors of vertex 0, and continues down until no unvisited vertices remain in that branch. The algorithm backtracks and continues exploring any unvisited neighbors of previously visited vertices.
+### DFS Iterative Approach: 
+- Traversal Process: DFS starts at the given vertex (vertex 0). The algorithm uses a stack to explore each vertex iteratively. Initially, vertex 0 is processed, and all its unvisited neighbors are pushed onto the stack. The algorithm then pops vertices from the stack one by one, processes them, and pushes their unvisited neighbors onto the stack. This continues until all reachable vertices are visited. The stack ensures that the algorithm explores as deeply as possible in each branch before backtracking to previously visited vertices.
 
 - Result: The DFS traversal for this graph starting from vertex 0 is:
 0 4 3 1 2
@@ -46,4 +45,4 @@ Vertex 4: [0, 3]
 ## Observations and Insights
 - DFS explores as deeply as possible along each branch before backtracking, which can result in different traversal orders depending on the graph structure.
 - BFS, on the other hand, explores all neighbors at the current depth level before moving on to the next level, resulting in a level-order traversal.
-- In this specific graph, the results of DFS (recursive) and BFS reflect how these algorithms handle graph traversal differently. DFS visits vertices in a depth-first manner, while BFS visits vertices in a breadth-first manner, processing all neighbors at each level before moving deeper.
+- In this specific graph, the results of DFS (Iterative) and BFS reflect how these algorithms handle graph traversal differently. DFS visits vertices in a depth-first manner, while BFS visits vertices in a breadth-first manner, processing all neighbors at each level before moving deeper.
