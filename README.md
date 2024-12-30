@@ -5,6 +5,7 @@ This project implements the Depth-First Search (DFS) and Breadth-First Search (B
 
 1. DFS(int startVertex): Performs a DFS starting from the given vertex and prints the traversal order. 
 2. BFS(int startVertex): Performs a BFS starting from the given vertex and prints the traversal order.
+3. Display() : Prints the graph’s structure using Adjacency Matrix, Adjacency List, or Edge List.
 
 ## Overview of the Graph
 The graph used in this project is an undirected graph represented using an Adjacency List. In this representation, each vertex points to a list of its neighboring vertices. This structure allows efficient graph traversal using DFS and BFS.
@@ -40,7 +41,7 @@ Vertex 4: [0, 3]
 - Explanation: Starting from vertex 0, we first visit all its neighbors (1 and 4). Then we move to vertex 1's neighbors (2 and 3). The traversal ends once all vertices are processed.
 
 ## OutPut
-![output](image.png)
+![Output](image.png)
 
 ## Observations and Insights
 - DFS explores as deeply as possible along each branch before backtracking, which can result in different traversal orders depending on the graph structure.

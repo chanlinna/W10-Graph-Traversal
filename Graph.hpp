@@ -16,6 +16,17 @@ public:
             adjList[v].push_back(u);
         }
     }
+    void Display(){
+        for(auto i: adjList){
+            cout << i.first<<" -> ";
+            for(auto j: i.second){
+            
+                cout << j << " ";
+            }
+            
+            cout << endl;
+        }
+    }
 
     map<int, list<int>>& getAdjList() {
         return adjList;

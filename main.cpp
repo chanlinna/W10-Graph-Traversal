@@ -12,6 +12,9 @@ int main() {
     g.addEdge(1, 3);
     g.addEdge(3, 4);
 
+    cout << "Adjacency List: " << endl; 
+    g.Display();
+
     // Create instances of DFS and BFS
     DFS dfs;
     BFS bfs;
